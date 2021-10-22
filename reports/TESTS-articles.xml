@@ -1,0 +1,70 @@
+<testsuite name="articles.User can manage articles" tests="6" errors="0" failures="0" skipped="0" time="0.050688" timestamp="2020-11-12T10:06:08.994355" hostname="Andrews-GS-MBP"><testcase classname="articles.User can manage articles" name="List all articles" status="passed" time="0.019253"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: List all articles
+    Given the article service ... passed in 0.000s
+    When a list of all articles is requested ... passed in 0.019s
+    Then the list of articles is returned ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="articles.User can manage articles" name="List single article -- @1.1 " status="passed" time="0.004639"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: List single article -- @1.1 
+    Given the article id is "1" ... passed in 0.000s
+    When a single article is requested ... passed in 0.004s
+    Then the requested article is returned ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="articles.User can manage articles" name="List single article -- @1.2 " status="passed" time="0.004277"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: List single article -- @1.2 
+    Given the article id is "2" ... passed in 0.000s
+    When a single article is requested ... passed in 0.004s
+    Then the requested article is returned ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="articles.User can manage articles" name="Invalid single article request" status="passed" time="0.005211"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Invalid single article request
+    Given the article service ... passed in 0.000s
+    And the article id is "900" ... passed in 0.000s
+    When a single article is requested ... passed in 0.005s
+    Then the status code "404" returned ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="articles.User can manage articles" name="Create a new article" status="passed" time="0.007263"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Create a new article
+    Given the article service ... passed in 0.000s
+    When the user creates a new article with the id "3" ... passed in 0.004s
+    And a single article is requested ... passed in 0.003s
+    Then the requested article is returned ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="articles.User can manage articles" name="Delete an article" status="passed" time="0.010045"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Delete an article
+    Given the article service ... passed in 0.000s
+    And the user creates a new article with the id "3" ... passed in 0.006s
+    When the user deletes the article with the id "3" ... passed in 0.004s
+    Then the requested article is not found ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

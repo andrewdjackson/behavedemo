@@ -1,0 +1,89 @@
+<testsuite name="login.User can login via the website" tests="6" errors="0" failures="0" skipped="0" time="10.111563" timestamp="2020-11-12T10:06:19.132227" hostname="Andrews-GS-MBP"><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.1 " status="passed" time="3.246483"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @selenium
+  Scenario Outline: User can login to the website with valid credentials -- @1.1 
+    Given the user is on the login page ... passed in 2.860s
+    And the username "user1" ... passed in 0.000s
+    And the password "pass1" ... passed in 0.000s
+    When the user logs in ... passed in 0.269s
+    Then the user has logged in with "success" ... passed in 0.117s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.2 " status="passed" time="2.240466"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @selenium
+  Scenario Outline: User can login to the website with valid credentials -- @1.2 
+    Given the user is on the login page ... passed in 1.934s
+    And the username "user1" ... passed in 0.000s
+    And the password "invalid" ... passed in 0.000s
+    When the user logs in ... passed in 0.216s
+    Then the user has logged in with "failed" ... passed in 0.090s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.3 " status="passed" time="2.33253"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @selenium
+  Scenario Outline: User can login to the website with valid credentials -- @1.3 
+    Given the user is on the login page ... passed in 1.964s
+    And the username "user2" ... passed in 0.000s
+    And the password "pass2" ... passed in 0.000s
+    When the user logs in ... passed in 0.255s
+    Then the user has logged in with "success" ... passed in 0.113s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.4 " status="passed" time="2.279435"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @selenium
+  Scenario Outline: User can login to the website with valid credentials -- @1.4 
+    Given the user is on the login page ... passed in 1.915s
+    And the username "user3" ... passed in 0.000s
+    And the password "pass3" ... passed in 0.000s
+    When the user logs in ... passed in 0.256s
+    Then the user has logged in with "failed" ... passed in 0.108s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.1 " status="passed" time="0.006527"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @headless
+  Scenario Outline: User can login to the website with valid credentials -- @1.1 
+    Given the username "user1" ... passed in 0.000s
+    And the password "pass1" ... passed in 0.000s
+    When the login form is submitted ... passed in 0.006s
+    Then the user has logged in with the status code "200" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.User can login via the website" name="User can login to the website with valid credentials -- @1.2 " status="passed" time="0.006122"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @headless
+  Scenario Outline: User can login to the website with valid credentials -- @1.2 
+    Given the username "user2" ... passed in 0.000s
+    And the password "pass2" ... passed in 0.000s
+    When the login form is submitted ... passed in 0.005s
+    Then the user has logged in with the status code "200" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
